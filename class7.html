@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7</title>
+<style>
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Select Subject</h2>
+
+<form id="subjectForm" action="#" method="get">
+    <label for="subject">Select a Subject:</label>
+    <select id="subject" name="subject">
+        <option value="hindi">Hindi</option>
+        <option value="english">English</option>
+        <option value="math">Math</option>
+        <option value="science">Science</option>
+        <option value="his">History</option>
+        <option value="geo">Geography</option>
+        <option value="civ">Civics</option>
+        <!-- Add more options for other subjects -->
+    </select>
+    <h1>Stay Conected with Us</h1>
+    <h1>Share this page</h1>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("subjectForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var selectedSubject = document.getElementById('subject').value;
+
+        // Open link based on the selected subject
+        switch (selectedSubject) {
+            case "hindi":
+                window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhVk1XjMOLPPjbAsEFRP0pSG&si=46sD3E6trE8gaDmC";
+                break;
+            case "english":
+                window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhUtRZO4cuJyDKv3VQogNVgZ&si=z-V4cE5dygE_z2WZ";
+                break;
+            case "math":
+                window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhVgT5aM-GRuQHnzthwllEHq&si=1Aqvxq3pnXTnSGBV";
+                break;
+            case "science":
+                window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhX0al4r0kMB03thG0YJU4ER&si=6JDsvA2ShvlIWsi0";
+                break;
+            case "his":
+                window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhUUe49TU6pfgcuxA_YFh8m8&si=us7SGUb5sFS6VoIR";
+                break;
+                case "geo":
+                window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhVjHjFP9Okf_SGiG8drP3nk&si=ZTOCoMvwIISks3tp";
+                break;
+                case "civ":
+                window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhVc2UkDsxedSQrIwJDZqLc4&si=StrexH72MPkIO_6Q";
+                break;
+            // Add more cases for other subjects
+            default:
+                // Default action if no match is found
+                alert("Invalid selection");
+        }
+    });
+</script>
+
+</body>
+</html>
