@@ -163,16 +163,68 @@
     <h2>Free Learning</h2>
     <p>Welcome to Ourstronaut! We provide free learning resources for students of all classes. Whether you're in Class 6, 7, 8, or 9, you'll find valuable educational materials here to aid in your studies.</p>
     <h2>Our Team</h2>
-    <div class="team-members">
-        <p>Meet our dedicated team members:</p>
-        <ul>
-            <li>Shubham</li>
-            <li>Shreyash</li>
-        </ul>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Keep the background white */
+        }
+        .team-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .team-member {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9; /* Light gray background */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #f9f9f9; /* Light gray border */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        .team-member:hover img {
+            border-color: #007bff; /* Blue border on hover */
+            transform: scale(1.1);
+        }
+        .team-member h3 {
+            margin-top: 20px;
+            color: #333; /* Dark gray text */
+        }
+        .team-member p {
+            color: #666; /* Gray text */
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="team-section">
+    <div class="team-member">
+        <img src="https://thumbs.dreamstime.com/b/ceo-icon-trendy-ceo-logo-concept-white-background-start-ceo-icon-trendy-ceo-logo-concept-white-background-startup-131195186.jpg" alt="Shubham">
+        <h3>Shubham</h3>
+        <p>Co-founder</p>
+    </div>
+    <div class="team-member">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiOc3CDpzGsiZN-kKXskxddSCcs-e6pfQCqt1RG6e5UQ&s" alt="Shreyash">
+        <h3>Shreyash</h3>
+        <p>Lead Developer</p>
     </div>
 </div>
 
-<div class="container">
+</body>
     <h2>Contact Us</h2>
     <form id="contact-form" method="post">
         <label for="name">Name:</label>
