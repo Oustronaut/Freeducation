@@ -37,6 +37,7 @@
     .profile h1 {
         margin: 10px 0;
         color: #333; /* Dark text color */
+        font-size: 28px; /* Larger font size */
     }
     .profile p {
         color: #666; /* Gray text color */
@@ -44,12 +45,13 @@
     }
     .button {
         display: inline-block;
-        padding: 10px 20px;
+        padding: 12px 24px; /* Increased padding */
         background-color: #007bff; /* Blue button color */
         color: #fff; /* White text color */
         text-decoration: none;
         border-radius: 5px; /* Rounded corners */
         transition: background-color 0.3s ease; /* Smooth transition */
+        font-size: 16px; /* Increased font size */
     }
     .button:hover {
         background-color: #0056b3; /* Darker blue color on hover */
@@ -91,44 +93,67 @@
         padding: 10px 0;
         width: 100%;
     }
+
+    /* Header styles */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    header a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    header a:hover {
+        text-decoration: underline;
+    }
 </style>
 </head>
 <body>
 
+<header>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+</header>
+
 <div class="container">
-    <div class="profile">
+    <div class="profile" id="home">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGZ6eevSKuh0cssr66vEz_kmT2PRqSDZa7wDR5BCH3ng&s" alt="Lead Developer">
-        <h1>Shreyash Gupta</h1>
+        <h1>Shreyash Kumar</h1>
         <p>Lead Developer</p>
     </div>
-    <p>As the lead developer at Oustronaut, I guide a skilled team dedicated to advancing space exploration technology. With a blend of innovation and expertise, I oversee the creation of cutting-edge software solutions driving our mission beyond Earth's limits. Through collaboration and determination, we're shaping a future where Oustronaut leads humanity's journey into the cosmos.</p>
-    <p>My name is Shreyash gupta from Bihar</p>
-    <a href="https://www.instagram.com/shre_yash_019?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="button">Contact</a>
+    <p>I am a passionate lead developer at Oustronaut, dedicated to advancing space exploration technology. With a blend of innovation and expertise, I lead a skilled team in creating cutting-edge software solutions driving our mission beyond Earth's limits. Through collaboration and determination, we are shaping a future where Oustronaut leads humanity's journey into the cosmos.</p>
+    <p>Location: Bihar, India</p>
+    <a href="https://www.instagram.com/shre_yash_019?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="button">Contact Me</a>
 
     <!-- Skills container -->
-    <div class="skills-container">
+    <div class="skills-container" id="skills">
         <div class="skill">
             <span class="skill-name">HTML</span>
             <div class="skill-level">
-                <div class="skill-level-filled" style="width: 100%;"></div>
+                <div class="skill-level-filled" style="width: 90%;"></div>
             </div>
         </div>
         <div class="skill">
             <span class="skill-name">CSS</span>
             <div class="skill-level">
-                <div class="skill-level-filled" style="width: 100%;"></div>
+                <div class="skill-level-filled" style="width: 85%;"></div>
             </div>
         </div>
         <div class="skill">
             <span class="skill-name">JavaScript</span>
             <div class="skill-level">
-                <div class="skill-level-filled" style="width: 100%;"></div>
+                <div class="skill-level-filled" style="width: 80%;"></div>
             </div>
         </div>
         <div class="skill">
             <span class="skill-name">PHP</span>
             <div class="skill-level">
-                <div class="skill-level-filled" style="width: 100%;"></div>
+                <div class="skill-level-filled" style="width: 75%;"></div>
             </div>
         </div>
     </div>
@@ -136,8 +161,11 @@
 
 <!-- Footer -->
 <footer>
-    <p>Contact: shreyashgupta@example.com</p>
+    <p>Contact: shreyashkumar@gmail.com</p>
 </footer>
 
 </body>
 </html>
+
+
+
