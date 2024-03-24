@@ -148,8 +148,7 @@
 <header>
     <h1>Ourstronaut</h1>
     <p>Select your class:</p>
-    <br>
-    <a href="CEO.html" class="button">Meet CEO</a>
+    
     <div>
         <select class="class-selector" id="class-selector">
             <option value="class-6">Class 6</option>
@@ -219,6 +218,33 @@
         <h3>Shubham</h3>
         <p>Co-founder</p>
     </div>
+    <style>
+        .button-div {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-div button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-div button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-div">
+    <button onclick="window.open('CEO.html', '_blank')">Meet CEO</button>
+</div>
+
+</body>
+    
     <div class="team-member">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiOc3CDpzGsiZN-kKXskxddSCcs-e6pfQCqt1RG6e5UQ&s" alt="Shreyash">
         <h3>Shreyash</h3>
