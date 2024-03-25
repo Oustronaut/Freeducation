@@ -270,6 +270,42 @@
         }
     </style>
 </head>
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+  }
+  .certificate {
+    width: 500px; /* Certificate width */
+    height: 350px; /* Certificate height */
+    border: 2px solid #000;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+  }
+  .certificate img {
+    max-width: 100%; /* Ensures the photo doesn't exceed the certificate's width */
+    max-height: 100%; /* Ensures the photo doesn't exceed the certificate's height */
+    position: absolute;
+    top: 50%; /* Centers the photo vertically */
+    left: 50%; /* Centers the photo horizontally */
+    transform: translate(-50%, -50%); /* Centers the photo precisely */
+  }
+</style>
+</head>
+<body>
+  <div class="certificate">
+    <img src="bussinescerti.jpg" alt="Certificate Photo">
+  </div>
+</body>
 <body>
 
 <div class="button-div">
