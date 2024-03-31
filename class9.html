@@ -5,30 +5,113 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Class 9</title>
 <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    h2 {
+        text-align: center;
+        margin-top: 30px;
+        color: #333;
+    }
+    form {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
     label {
         display: block;
         margin-bottom: 10px;
+        color: #555;
     }
     select {
         width: 100%;
         padding: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
     }
     button {
+        width: 100%;
         background-color: #4CAF50;
         border: none;
         color: white;
-        padding: 10px 20px;
+        padding: 10px 0;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-        margin: 4px 2px;
+        margin-top: 10px;
         cursor: pointer;
         border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .advertisement {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .advertisement h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .advertisement p {
+        margin-bottom: 20px;
+    }
+    .advertisement button {
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+    .advertisement button:hover {
+        background-color: #0056b3;
+    }
+    /* Styling for Pearson subject selection */
+    .pearson-section {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+    }
+    .pearson-section h3 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .pearson-section ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .pearson-section li {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .pearson-section li a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+    .pearson-section li a:hover {
+        background-color: #0056b3;
     }
 </style>
 </head>
@@ -48,11 +131,29 @@
         <option value="civ">Civics</option>
         <!-- Add more options for other subjects -->
     </select>
-    <h1>Stay Conected with Us</h1>
-    <h1>Share this page</h1>
-
     <button type="submit">Submit</button>
 </form>
+
+<!-- Pearson Subject Selection Section -->
+<div class="pearson-section">
+    <h3>Pearson IIT Foundation</h3>
+    <ul>
+        <li><a href="#">Pearson Physics</a></li>
+        <li><a href="#">Pearson Chemistry</a></li>
+        <li><a href="#">Pearson Math</a></li>
+        <!-- Add more Pearson subjects as needed -->
+    </ul>
+</div>
+
+<div class="advertisement">
+    <h2>Stay Connected with Us</h2>
+    <p>Click the button below to share this page with your friends and classmates!</p>
+    <button id="shareBtn">Share Now</button>
+    <div class="share-link" id="shareLink">
+        <p>Share this link:</p>
+        <input type="text" id="copyLink" readonly>
+    </div>
+</div>
 
 <script>
     document.getElementById("subjectForm").addEventListener("submit", function(event) {
@@ -77,10 +178,10 @@
             case "his":
                 window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhUvAmP7ZlLrVAfXHuoGthee&si=_bHrJtQgDty1Pej8";
                 break;
-                case "geo":
+            case "geo":
                 window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhVnay9XxI3B1G3-6nOsXM2L&si=5qt2XT2bJro3kaYI";
                 break;
-                case "civ":
+            case "civ":
                 window.location.href = "https://youtube.com/playlist?list=PLVLoWQFkZbhViA8KrG2BbHPS16cZvBDRF&si=4z3LjNBXZg5nwKIt";
                 break;
             // Add more cases for other subjects
@@ -88,6 +189,22 @@
                 // Default action if no match is found
                 alert("Invalid selection");
         }
+    });
+    document.getElementById("shareBtn").addEventListener("click", function() {
+        var copyText = document.getElementById("copyLink");
+        var shareLink = "https://oustronaut.github.io/Freeducation/";
+
+        copyText.value = shareLink;
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        document.execCommand("copy");
+
+        // Show the share link div
+        document.getElementById("shareLink").style.display = "block";
+
+        // Change button text to indicate link has been copied
+        this.innerHTML = "Link Copied!";
     });
 </script>
 
