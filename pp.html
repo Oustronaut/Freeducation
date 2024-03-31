@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Chapter</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 30px;
+        color: #333;
+    }
+    form {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: #555;
+    }
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<h1>Select Chapter</h1>
+
+<form id="chapterForm" action="#" method="get">
+    <label for="chapter">Select a Chapter:</label>
+    <select id="chapter" name="chapter">
+        <option value="">None</option>
+        <option value="chapter1">MEASUREMENTS</option>
+        <option value="chapter2">KINEMATICS</option>
+        <option value="chapter3">DYNAMICS</option>
+        <option value="chapter4">SIMPLE MACHINES</option>
+        <option value="chapter5">GRAVITATION</option>
+        <option value="chapter6">HYDROSTATICS</option>
+        <option value="chapter7">HEAT</option>
+        <option value="chapter8">WAVE & SOUND</option>
+        <option value="chapter9">LIGHT</option>
+        <option value="chapter10">ELECTRICITY</option>
+        <option value="chapter11">MAGNETISM</option>
+        <option value="chapter12">MODERN PHYSICS</option>
+        <!-- Add more options for other chapters -->
+    </select>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("chapterForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var selectedChapter = document.getElementById('chapter').value;
+
+        // Open link based on the selected chapter
+        switch (selectedChapter) {
+            case "chapter1":
+                window.location.href = "https://youtube.com/playlist?list=PLI3LkhEHHaK61v6d3ceABAwqe_fba86fF&si=-wjMqcaiEH2f1Uhb";
+                break;
+            case "chapter2":
+                window.location.href = "https://youtube.com/playlist?list=PLI3LkhEHHaK7Qqb3V0RTInW3ULDnqTiD4&si=DVQD2M6_gOV0YoMv";
+                break;
+            case "chapter3":
+                window.location.href = "https://youtube.com/playlist?list=PLI3LkhEHHaK57wXMIMZWFrm8rI4BwA0Tb&si=wtwd_xDqcXGpbqOF";
+                break;
+            case "chapter4":
+                window.location.href = "https://youtube.com/playlist?list=PLI3LkhEHHaK7pEXsDctDG9KAjpFgbRpOg&si=Z-9oCxgHz3aEowN5";
+                break;
+                case "chapter5":
+                window.location.href = "https://youtu.be/2MtEftwv5Uc?si=XAIAOxx6r0ZlHLBc";
+                break;
+                case "chapter6":
+                window.location.href = "cmng.html";
+                break;
+                case "chapter7":
+                window.location.href = "https://youtube.com/playlist?list=PLI3LkhEHHaK5Y6G-tmc3Nsx3PliwlWTeJ&si=anqxVZsvhuS6RQ5g";
+                break;
+                case "chapter8":
+                window.location.href = "cmng.html";
+                break;
+                case "chapter9":
+                window.location.href = "cmng.html";
+                break;
+                case "chapter10":
+                window.location.href = "cmng.html";
+                break;
+                case "chapter11":
+                window.location.href = "cmng.html";
+                break;
+                case "chapter12":
+                window.location.href = "cmng.html";
+                break;
+               
+            // Add more cases for other chapters
+            default:
+                // Default action if no match is found
+                alert("Invalid selection");
+        }
+    });
+</script>
+
+</body>
+</html>
